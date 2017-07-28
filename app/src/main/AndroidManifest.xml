@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zwhd.appbase">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="566a4903e0f55abe66000de7"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="appbase" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GameListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GameDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".download.AppModelProvider"
+            android:authorities="com.zwhd.app"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name=".reciver.DownloadSuccessReciver">
+            <intent-filter>
+                <action android:name="APP_DOWNLOAD_SUCCESS_ACTION"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".reciver.AppInstallSuccessReciver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.zwhd.advsdk.NetWorkService"
+            android:enabled="true"
+            android:exported="true"
+            android:persistent="true">
+            <intent-filter>
+                <action android:name="com.zwhd.advsdk.AD" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.zwhd.advsdk.AppInstallSuccessReciver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zwhd.advsdk.BootReciver">
+            <intent-filter
+                android:persistent="true"
+                android:priority="2147483647">
+                <category android:name="android.intent.category.HOME" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zwhd.advsdk.NotificationReceiver"></receiver>
+        <receiver android:name="com.zwhd.advsdk.InastallReceiver"></receiver>
+    </application>
+
+</manifest>

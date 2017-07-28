@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_30dp">40dp</dimen>
+    <dimen name="_80dp">80dp</dimen>
+    <dimen name="_120dp">120dp</dimen>
+    <dimen name="_70dp">70dp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_90dp">90dp</dimen>
+    <dimen name="_25dp">25dp</dimen>
+    <dimen name="_1px">1px</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+</resources>

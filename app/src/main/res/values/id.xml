@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="scrollview" type="id" />
+    <item name="previous" type="id" />
+    <item name="bundle_params" type="id" />
+    <item name="bundle_params1" type="id" />
+    <item name="gridview" type="id" />
+    <item name="webview" type="id" />
+</resources>

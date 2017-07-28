@@ -1,0 +1,113 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f7f7f7">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/_03a9f3"
+        android:paddingBottom="@dimen/_10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_10dp"
+            android:paddingLeft="@dimen/_10dp"
+            android:paddingTop="@dimen/_5dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_line_white_bg"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/search_game_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/search_game"
+                    android:textColorHint="@color/_cfcfcf"
+                    android:imeOptions="actionSearch"
+                    android:padding="@dimen/_10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/_cfcfcf" />
+
+                <ImageView
+                    android:id="@+id/search_button"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/search_select_btn"
+                    android:scaleType="center"
+                    android:src="@drawable/search_icon" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/downloads"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:background="@drawable/search_select_btn"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/game_dawnload"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_14sp" />
+
+                <ImageView
+                    android:id="@+id/downloads_img"
+                    android:layout_width="@dimen/_25dp"
+                    android:background="@drawable/round_white_shape"
+                    android:layout_height="@dimen/_25dp"
+                    android:scaleType="center"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/download_icon"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/item_progress"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/voal_progresss" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_5dp"
+            android:paddingRight="@dimen/_5dp"
+            app:tabIndicatorColor="@color/_ffffff"
+            app:tabSelectedTextColor="@color/_ffffff"
+            app:tabTextColor="@color/_86cbf8" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

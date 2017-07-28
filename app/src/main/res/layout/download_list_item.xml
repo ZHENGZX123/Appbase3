@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/_f7f7f7"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1px"
+            android:background="@color/_e5e5e5"
+            android:paddingBottom="@dimen/_10dp"
+            android:paddingLeft="@dimen/_10dp"
+            android:paddingRight="@dimen/_10dp"
+            android:paddingTop="@dimen/_5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_10dp"
+            android:paddingRight="@dimen/_10dp">
+
+            <com.zwhd.appbase.roundimg.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/game_pic"
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="@dimen/_60dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_launcher"
+                app:sriv_left_bottom_corner_radius="@dimen/_10dp"
+                app:sriv_left_top_corner_radius="@dimen/_10dp"
+                app:sriv_right_bottom_corner_radius="@dimen/_10dp"
+                app:sriv_right_top_corner_radius="@dimen/_10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_20dp"
+                android:paddingRight="@dimen/_20dp">
+
+                <TextView
+                    android:id="@+id/game_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_3dp"
+                    android:singleLine="true"
+                    android:textColor="#333333" />
+
+                <ProgressBar
+                    android:id="@+id/item_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progressDrawable="@drawable/download_progress_layer" />
+
+                <TextView
+                    android:id="@+id/game_dawnload_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5dp"
+                    android:textColor="@color/_999999" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/download_btn"
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/round_bule_white_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/download_game"
+                android:textColor="@color/_03a9f3"
+                android:textSize="@dimen/_10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/_1px"
+        android:layout_height="match_parent"
+        android:background="@color/_e5e5e5" />
+</LinearLayout>

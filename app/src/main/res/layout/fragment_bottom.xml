@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingLeft="@dimen/_20dp"
+        android:textSize="@dimen/_14sp"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="@string/New_recommendation" />
+
+</LinearLayout>

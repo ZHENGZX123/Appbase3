@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/_f7f7f7">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/frame_game_adv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/rb_g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_40dp"
+        android:background="@drawable/adv_select_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rd1"
+            android:layout_width="@dimen/_8dp"
+            android:layout_height="@dimen/_8dp"
+            android:background="@drawable/adv_radio_select_btn"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rd2"
+            android:layout_width="@dimen/_8dp"
+            android:layout_height="@dimen/_8dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:background="@drawable/adv_radio_select_btn"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/rd3"
+            android:layout_width="@dimen/_8dp"
+            android:layout_height="@dimen/_8dp"
+            android:background="@drawable/adv_radio_select_btn"
+            android:button="@null" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1px"
+        android:layout_below="@+id/frame_game_adv"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@color/_e5e5e5"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingRight="@dimen/_10dp" />
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:background="@color/_ffffff"
+        android:paddingBottom="@dimen/_5dp"
+        android:paddingLeft="@dimen/_20dp"
+        android:paddingTop="@dimen/_5dp"
+        android:textColor="@color/_666666"
+        android:textSize="@dimen/_14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/_0196b9" />
+</RelativeLayout>

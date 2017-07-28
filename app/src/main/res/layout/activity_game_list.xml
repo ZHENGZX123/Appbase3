@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f7f7f7"
+    android:orientation="vertical"
+    tools:context="com.zwhd.appbase.activity.GameListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:background="@color/_03a9f3">
+
+        <ImageView
+            android:id="@+id/previour"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10dp"
+            android:src="@drawable/preious" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/download_detail"
+            android:textColor="@color/_ffffff" />
+    </RelativeLayout>
+
+
+    <com.allen.expandablelistview.SwipeMenuExpandableListView
+        android:id="@+id/game_list_item"
+        android:layout_width="match_parent"
+        android:groupIndicator="@null"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
